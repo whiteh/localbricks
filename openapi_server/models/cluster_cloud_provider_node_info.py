@@ -22,8 +22,11 @@ class ClusterCloudProviderNodeInfo(BaseModel):
         total_core_quota: The total_core_quota of this ClusterCloudProviderNodeInfo [Optional].
     """
 
-    status: Optional[ClusterCloudProviderNodeStatus] = Field(alias="status", default=None)
-    available_core_quota: Optional[int] = Field(alias="available_core_quota", default=None)
+    status: Optional[ClusterCloudProviderNodeStatus] = Field(
+        alias="status", default=None)
+    available_core_quota: Optional[int] = Field(
+        alias="available_core_quota", default=None)
     total_core_quota: Optional[int] = Field(alias="total_core_quota", default=None)
+
 
 ClusterCloudProviderNodeInfo.update_forward_refs()

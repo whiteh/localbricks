@@ -24,9 +24,12 @@ class RunState(BaseModel):
         state_message: The state_message of this RunState [Optional].
     """
 
-    life_cycle_state: Optional[RunLifeCycleState] = Field(alias="life_cycle_state", default=None)
+    life_cycle_state: Optional[RunLifeCycleState] = Field(
+        alias="life_cycle_state", default=None)
     result_state: Optional[RunResultState] = Field(alias="result_state", default=None)
-    user_cancelled_or_timedout: Optional[bool] = Field(alias="user_cancelled_or_timedout", default=None)
+    user_cancelled_or_timedout: Optional[bool] = Field(
+        alias="user_cancelled_or_timedout", default=None)
     state_message: Optional[str] = Field(alias="state_message", default=None)
+
 
 RunState.update_forward_refs()

@@ -25,6 +25,8 @@ class JobEmailNotifications(BaseModel):
     on_start: Optional[List[str]] = Field(alias="on_start", default=None)
     on_success: Optional[List[str]] = Field(alias="on_success", default=None)
     on_failure: Optional[List[str]] = Field(alias="on_failure", default=None)
-    no_alert_for_skipped_runs: Optional[bool] = Field(alias="no_alert_for_skipped_runs", default=None)
+    no_alert_for_skipped_runs: Optional[bool] = Field(
+        alias="no_alert_for_skipped_runs", default=None)
+
 
 JobEmailNotifications.update_forward_refs()

@@ -21,7 +21,10 @@ class AccessControlRequestForServicePrincipal(BaseModel):
         permission_level: The permission_level of this AccessControlRequestForServicePrincipal [Optional].
     """
 
-    service_principal_name: Optional[str] = Field(alias="service_principal_name", default=None)
-    permission_level: Optional[PermissionLevel] = Field(alias="permission_level", default=None)
+    service_principal_name: Optional[str] = Field(
+        alias="service_principal_name", default=None)
+    permission_level: Optional[PermissionLevel] = Field(
+        alias="permission_level", default=None)
+
 
 AccessControlRequestForServicePrincipal.update_forward_refs()

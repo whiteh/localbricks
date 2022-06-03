@@ -100,7 +100,8 @@ async def jobs_delete(
     response_model_by_alias=True,
 )
 async def jobs_get(
-    job_id: int = Query(None, description="The canonical identifier of the job to retrieve information about. This field is required."),
+    job_id: int = Query(
+        None, description="The canonical identifier of the job to retrieve information about. This field is required."),
     token_bearerAuth: TokenModel = Security(
         get_token_bearerAuth
     ),
@@ -122,9 +123,12 @@ async def jobs_get(
     response_model_by_alias=True,
 )
 async def jobs_list(
-    limit: int = Query(20, description="The number of jobs to return. This value must be greater than 0 and less or equal to 25. The default value is 20.", ge=1, le=25),
-    offset: int = Query(0, description="The offset of the first job to return, relative to the most recently created job.", ge=0),
-    expand_tasks: bool = Query(False, description="Whether to include task and cluster details in the response."),
+    limit: int = Query(
+        20, description="The number of jobs to return. This value must be greater than 0 and less or equal to 25. The default value is 20.", ge=1, le=25),
+    offset: int = Query(
+        0, description="The offset of the first job to return, relative to the most recently created job.", ge=0),
+    expand_tasks: bool = Query(
+        False, description="Whether to include task and cluster details in the response."),
     token_bearerAuth: TokenModel = Security(
         get_token_bearerAuth
     ),
@@ -234,8 +238,10 @@ async def jobs_runs_delete(
     response_model_by_alias=True,
 )
 async def jobs_runs_export(
-    run_id: int = Query(None, description="The canonical identifier for the run. This field is required."),
-    views_to_export: int = Query(None, description="Which views to export (CODE, DASHBOARDS, or ALL). Defaults to CODE."),
+    run_id: int = Query(
+        None, description="The canonical identifier for the run. This field is required."),
+    views_to_export: int = Query(
+        None, description="Which views to export (CODE, DASHBOARDS, or ALL). Defaults to CODE."),
     token_bearerAuth: TokenModel = Security(
         get_token_bearerAuth
     ),
@@ -257,8 +263,10 @@ async def jobs_runs_export(
     response_model_by_alias=True,
 )
 async def jobs_runs_get(
-    run_id: int = Query(None, description="The canonical identifier of the run for which to retrieve the metadata. This field is required."),
-    include_history: bool = Query(None, description="Whether to include the repair history in the response."),
+    run_id: int = Query(
+        None, description="The canonical identifier of the run for which to retrieve the metadata. This field is required."),
+    include_history: bool = Query(
+        None, description="Whether to include the repair history in the response."),
     token_bearerAuth: TokenModel = Security(
         get_token_bearerAuth
     ),
@@ -280,7 +288,8 @@ async def jobs_runs_get(
     response_model_by_alias=True,
 )
 async def jobs_runs_get_output(
-    run_id: int = Query(None, description="The canonical identifier for the run. This field is required."),
+    run_id: int = Query(
+        None, description="The canonical identifier for the run. This field is required."),
     token_bearerAuth: TokenModel = Security(
         get_token_bearerAuth
     ),
@@ -303,14 +312,21 @@ async def jobs_runs_get_output(
 )
 async def jobs_runs_list(
     active_only: bool = Query(False, description="If active_only is &#x60;true&#x60;, only active runs are included in the results; otherwise, lists both active and completed runs. An active run is a run in the &#x60;PENDING&#x60;, &#x60;RUNNING&#x60;, or &#x60;TERMINATING&#x60;. This field cannot be &#x60;true&#x60; when completed_only is &#x60;true&#x60;."),
-    completed_only: bool = Query(False, description="If completed_only is &#x60;true&#x60;, only completed runs are included in the results; otherwise, lists both active and completed runs. This field cannot be &#x60;true&#x60; when active_only is &#x60;true&#x60;."),
-    job_id: int = Query(None, description="The job for which to list runs. If omitted, the Jobs service lists runs from all jobs."),
-    offset: int = Query(0, description="The offset of the first run to return, relative to the most recent run."),
+    completed_only: bool = Query(
+        False, description="If completed_only is &#x60;true&#x60;, only completed runs are included in the results; otherwise, lists both active and completed runs. This field cannot be &#x60;true&#x60; when active_only is &#x60;true&#x60;."),
+    job_id: int = Query(
+        None, description="The job for which to list runs. If omitted, the Jobs service lists runs from all jobs."),
+    offset: int = Query(
+        0, description="The offset of the first run to return, relative to the most recent run."),
     limit: int = Query(25, description="The number of runs to return. This value must be greater than 0 and less than 25\\. The default value is 25\\. If a request specifies a limit of 0, the service instead uses the maximum limit.", ge=1, le=25),
-    run_type: str = Query(None, description="The type of runs to return. For a description of run types, see [Run](https://docs.databricks.com/dev-tools/api/latest/jobs.html#operation/JobsRunsGet)."),
-    expand_tasks: bool = Query(False, description="Whether to include task and cluster details in the response."),
-    start_time_from: int = Query(None, description="Show runs that started _at or after_ this value. The value must be a UTC timestamp in milliseconds. Can be combined with _start_time_to_ to filter by a time range."),
-    start_time_to: int = Query(None, description="Show runs that started _at or before_ this value. The value must be a UTC timestamp in milliseconds. Can be combined with _start_time_from_ to filter by a time range."),
+    run_type: str = Query(
+        None, description="The type of runs to return. For a description of run types, see [Run](https://docs.databricks.com/dev-tools/api/latest/jobs.html#operation/JobsRunsGet)."),
+    expand_tasks: bool = Query(
+        False, description="Whether to include task and cluster details in the response."),
+    start_time_from: int = Query(
+        None, description="Show runs that started _at or after_ this value. The value must be a UTC timestamp in milliseconds. Can be combined with _start_time_to_ to filter by a time range."),
+    start_time_to: int = Query(
+        None, description="Show runs that started _at or before_ this value. The value must be a UTC timestamp in milliseconds. Can be combined with _start_time_from_ to filter by a time range."),
     token_bearerAuth: TokenModel = Security(
         get_token_bearerAuth
     ),

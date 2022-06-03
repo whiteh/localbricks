@@ -23,4 +23,5 @@ class DockerBasicAuth(BaseModel):
     username: Optional[str] = Field(alias="username", default=None)
     password: Optional[str] = Field(alias="password", default=None)
 
+
 DockerBasicAuth.update_forward_refs()

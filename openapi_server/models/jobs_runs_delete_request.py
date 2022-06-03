@@ -21,4 +21,5 @@ class JobsRunsDeleteRequest(BaseModel):
 
     run_id: Optional[int] = Field(alias="run_id", default=None)
 
+
 JobsRunsDeleteRequest.update_forward_refs()

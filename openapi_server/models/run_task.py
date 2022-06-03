@@ -56,23 +56,29 @@ class RunTask(BaseModel):
     task_key: Optional[str] = Field(alias="task_key", default=None)
     description: Optional[str] = Field(alias="description", default=None)
     state: Optional[RunState] = Field(alias="state", default=None)
-    depends_on: Optional[List[TaskDependenciesInner]] = Field(alias="depends_on", default=None)
-    existing_cluster_id: Optional[str] = Field(alias="existing_cluster_id", default=None)
+    depends_on: Optional[List[TaskDependenciesInner]
+                         ] = Field(alias="depends_on", default=None)
+    existing_cluster_id: Optional[str] = Field(
+        alias="existing_cluster_id", default=None)
     new_cluster: Optional[NewCluster] = Field(alias="new_cluster", default=None)
     libraries: Optional[List[Library]] = Field(alias="libraries", default=None)
     notebook_task: Optional[NotebookTask] = Field(alias="notebook_task", default=None)
     spark_jar_task: Optional[SparkJarTask] = Field(alias="spark_jar_task", default=None)
-    spark_python_task: Optional[SparkPythonTask] = Field(alias="spark_python_task", default=None)
-    spark_submit_task: Optional[SparkSubmitTask] = Field(alias="spark_submit_task", default=None)
+    spark_python_task: Optional[SparkPythonTask] = Field(
+        alias="spark_python_task", default=None)
+    spark_submit_task: Optional[SparkSubmitTask] = Field(
+        alias="spark_submit_task", default=None)
     pipeline_task: Optional[PipelineTask] = Field(alias="pipeline_task", default=None)
-    python_wheel_task: Optional[PythonWheelTask] = Field(alias="python_wheel_task", default=None)
+    python_wheel_task: Optional[PythonWheelTask] = Field(
+        alias="python_wheel_task", default=None)
     start_time: Optional[int] = Field(alias="start_time", default=None)
     setup_duration: Optional[int] = Field(alias="setup_duration", default=None)
     execution_duration: Optional[int] = Field(alias="execution_duration", default=None)
     cleanup_duration: Optional[int] = Field(alias="cleanup_duration", default=None)
     end_time: Optional[int] = Field(alias="end_time", default=None)
     attempt_number: Optional[int] = Field(alias="attempt_number", default=None)
-    cluster_instance: Optional[ClusterInstance] = Field(alias="cluster_instance", default=None)
+    cluster_instance: Optional[ClusterInstance] = Field(
+        alias="cluster_instance", default=None)
     git_source: Optional[GitSource] = Field(alias="git_source", default=None)
 
     @validator("task_key")
@@ -94,5 +100,6 @@ class RunTask(BaseModel):
     def description_max_length(cls, value):
         assert len(value) <= 4096
         return value
+
 
 RunTask.update_forward_refs()

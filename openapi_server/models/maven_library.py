@@ -25,4 +25,5 @@ class MavenLibrary(BaseModel):
     repo: Optional[str] = Field(alias="repo", default=None)
     exclusions: Optional[List[str]] = Field(alias="exclusions", default=None)
 
+
 MavenLibrary.update_forward_refs()

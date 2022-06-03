@@ -21,4 +21,5 @@ class JobsDeleteRequest(BaseModel):
 
     job_id: int = Field(alias="job_id")
 
+
 JobsDeleteRequest.update_forward_refs()

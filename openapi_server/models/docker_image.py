@@ -24,4 +24,5 @@ class DockerImage(BaseModel):
     url: Optional[str] = Field(alias="url", default=None)
     basic_auth: Optional[DockerBasicAuth] = Field(alias="basic_auth", default=None)
 
+
 DockerImage.update_forward_refs()

@@ -31,7 +31,9 @@ class SparkNode(BaseModel):
     node_id: Optional[str] = Field(alias="node_id", default=None)
     instance_id: Optional[str] = Field(alias="instance_id", default=None)
     start_timestamp: Optional[int] = Field(alias="start_timestamp", default=None)
-    node_aws_attributes: Optional[SparkNodeAwsAttributes] = Field(alias="node_aws_attributes", default=None)
+    node_aws_attributes: Optional[SparkNodeAwsAttributes] = Field(
+        alias="node_aws_attributes", default=None)
     host_private_ip: Optional[str] = Field(alias="host_private_ip", default=None)
+
 
 SparkNode.update_forward_refs()

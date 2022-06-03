@@ -24,4 +24,5 @@ class JobsResetRequest(BaseModel):
     job_id: int = Field(alias="job_id")
     new_settings: Optional[JobSettings] = Field(alias="new_settings", default=None)
 
+
 JobsResetRequest.update_forward_refs()

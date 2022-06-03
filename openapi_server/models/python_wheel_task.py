@@ -25,6 +25,8 @@ class PythonWheelTask(BaseModel):
     package_name: Optional[str] = Field(alias="package_name", default=None)
     entry_point: Optional[str] = Field(alias="entry_point", default=None)
     parameters: Optional[List[str]] = Field(alias="parameters", default=None)
-    named_parameters: Optional[Dict[str, Any]] = Field(alias="named_parameters", default=None)
+    named_parameters: Optional[Dict[str, Any]] = Field(
+        alias="named_parameters", default=None)
+
 
 PythonWheelTask.update_forward_refs()

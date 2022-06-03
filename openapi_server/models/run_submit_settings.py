@@ -31,4 +31,5 @@ class RunSubmitSettings(BaseModel):
     timeout_seconds: Optional[int] = Field(alias="timeout_seconds", default=None)
     idempotency_token: Optional[str] = Field(alias="idempotency_token", default=None)
 
+
 RunSubmitSettings.update_forward_refs()

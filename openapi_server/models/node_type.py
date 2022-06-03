@@ -32,6 +32,8 @@ class NodeType(BaseModel):
     description: str = Field(alias="description")
     instance_type_id: str = Field(alias="instance_type_id")
     is_deprecated: Optional[bool] = Field(alias="is_deprecated", default=None)
-    node_info: Optional[ClusterCloudProviderNodeInfo] = Field(alias="node_info", default=None)
+    node_info: Optional[ClusterCloudProviderNodeInfo] = Field(
+        alias="node_info", default=None)
+
 
 NodeType.update_forward_refs()

@@ -43,19 +43,28 @@ class ClusterAttributes(BaseModel):
     cluster_name: Optional[str] = Field(alias="cluster_name", default=None)
     spark_version: Optional[str] = Field(alias="spark_version", default=None)
     spark_conf: Optional[Dict[str, Any]] = Field(alias="spark_conf", default=None)
-    aws_attributes: Optional[AwsAttributes] = Field(alias="aws_attributes", default=None)
+    aws_attributes: Optional[AwsAttributes] = Field(
+        alias="aws_attributes", default=None)
     node_type_id: Optional[str] = Field(alias="node_type_id", default=None)
-    driver_node_type_id: Optional[str] = Field(alias="driver_node_type_id", default=None)
+    driver_node_type_id: Optional[str] = Field(
+        alias="driver_node_type_id", default=None)
     ssh_public_keys: Optional[List[str]] = Field(alias="ssh_public_keys", default=None)
     custom_tags: Optional[Dict[str, str]] = Field(alias="custom_tags", default=None)
-    cluster_log_conf: Optional[ClusterLogConf] = Field(alias="cluster_log_conf", default=None)
-    init_scripts: Optional[List[InitScriptInfo]] = Field(alias="init_scripts", default=None)
+    cluster_log_conf: Optional[ClusterLogConf] = Field(
+        alias="cluster_log_conf", default=None)
+    init_scripts: Optional[List[InitScriptInfo]] = Field(
+        alias="init_scripts", default=None)
     docker_image: Optional[DockerImage] = Field(alias="docker_image", default=None)
-    spark_env_vars: Optional[Dict[str, Any]] = Field(alias="spark_env_vars", default=None)
-    autotermination_minutes: Optional[int] = Field(alias="autotermination_minutes", default=None)
-    enable_elastic_disk: Optional[bool] = Field(alias="enable_elastic_disk", default=None)
+    spark_env_vars: Optional[Dict[str, Any]] = Field(
+        alias="spark_env_vars", default=None)
+    autotermination_minutes: Optional[int] = Field(
+        alias="autotermination_minutes", default=None)
+    enable_elastic_disk: Optional[bool] = Field(
+        alias="enable_elastic_disk", default=None)
     instance_pool_id: Optional[str] = Field(alias="instance_pool_id", default=None)
-    cluster_source: Optional[ClusterSource] = Field(alias="cluster_source", default=None)
+    cluster_source: Optional[ClusterSource] = Field(
+        alias="cluster_source", default=None)
     policy_id: Optional[str] = Field(alias="policy_id", default=None)
+
 
 ClusterAttributes.update_forward_refs()

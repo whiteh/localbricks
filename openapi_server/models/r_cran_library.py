@@ -23,4 +23,5 @@ class RCranLibrary(BaseModel):
     package: str = Field(alias="package")
     repo: Optional[str] = Field(alias="repo", default=None)
 
+
 RCranLibrary.update_forward_refs()

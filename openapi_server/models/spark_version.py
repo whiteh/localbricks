@@ -23,4 +23,5 @@ class SparkVersion(BaseModel):
     key: Optional[str] = Field(alias="key", default=None)
     name: Optional[str] = Field(alias="name", default=None)
 
+
 SparkVersion.update_forward_refs()

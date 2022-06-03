@@ -23,4 +23,5 @@ class ClusterInstance(BaseModel):
     cluster_id: Optional[str] = Field(alias="cluster_id", default=None)
     spark_context_id: Optional[str] = Field(alias="spark_context_id", default=None)
 
+
 ClusterInstance.update_forward_refs()

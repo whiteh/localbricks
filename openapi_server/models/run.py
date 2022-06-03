@@ -55,15 +55,18 @@ class Run(BaseModel):
     run_id: Optional[int] = Field(alias="run_id", default=None)
     number_in_job: Optional[int] = Field(alias="number_in_job", default=None)
     creator_user_name: Optional[str] = Field(alias="creator_user_name", default=None)
-    original_attempt_run_id: Optional[int] = Field(alias="original_attempt_run_id", default=None)
+    original_attempt_run_id: Optional[int] = Field(
+        alias="original_attempt_run_id", default=None)
     state: Optional[RunState] = Field(alias="state", default=None)
     schedule: Optional[CronSchedule] = Field(alias="schedule", default=None)
     tasks: Optional[List[RunTask]] = Field(alias="tasks", default=None)
     job_clusters: Optional[List[JobCluster]] = Field(alias="job_clusters", default=None)
     cluster_spec: Optional[ClusterSpec] = Field(alias="cluster_spec", default=None)
-    cluster_instance: Optional[ClusterInstance] = Field(alias="cluster_instance", default=None)
+    cluster_instance: Optional[ClusterInstance] = Field(
+        alias="cluster_instance", default=None)
     git_source: Optional[GitSource] = Field(alias="git_source", default=None)
-    overriding_parameters: Optional[RunParameters] = Field(alias="overriding_parameters", default=None)
+    overriding_parameters: Optional[RunParameters] = Field(
+        alias="overriding_parameters", default=None)
     start_time: Optional[int] = Field(alias="start_time", default=None)
     setup_duration: Optional[int] = Field(alias="setup_duration", default=None)
     execution_duration: Optional[int] = Field(alias="execution_duration", default=None)
@@ -74,5 +77,6 @@ class Run(BaseModel):
     run_page_url: Optional[str] = Field(alias="run_page_url", default=None)
     run_type: Optional[RunType] = Field(alias="run_type", default=None)
     attempt_number: Optional[int] = Field(alias="attempt_number", default=None)
+
 
 Run.update_forward_refs()

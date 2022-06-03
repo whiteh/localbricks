@@ -25,4 +25,5 @@ class SparkJarTask(BaseModel):
     parameters: Optional[List[str]] = Field(alias="parameters", default=None)
     jar_uri: Optional[str] = Field(alias="jar_uri", default=None)
 
+
 SparkJarTask.update_forward_refs()

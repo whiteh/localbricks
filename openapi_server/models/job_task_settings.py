@@ -48,21 +48,28 @@ class JobTaskSettings(BaseModel):
 
     task_key: str = Field(alias="task_key")
     description: Optional[str] = Field(alias="description", default=None)
-    depends_on: Optional[List[TaskDependenciesInner]] = Field(alias="depends_on", default=None)
-    existing_cluster_id: Optional[str] = Field(alias="existing_cluster_id", default=None)
+    depends_on: Optional[List[TaskDependenciesInner]
+                         ] = Field(alias="depends_on", default=None)
+    existing_cluster_id: Optional[str] = Field(
+        alias="existing_cluster_id", default=None)
     new_cluster: Optional[NewCluster] = Field(alias="new_cluster", default=None)
     job_cluster_key: Optional[str] = Field(alias="job_cluster_key", default=None)
     notebook_task: Optional[NotebookTask] = Field(alias="notebook_task", default=None)
     spark_jar_task: Optional[SparkJarTask] = Field(alias="spark_jar_task", default=None)
-    spark_python_task: Optional[SparkPythonTask] = Field(alias="spark_python_task", default=None)
-    spark_submit_task: Optional[SparkSubmitTask] = Field(alias="spark_submit_task", default=None)
+    spark_python_task: Optional[SparkPythonTask] = Field(
+        alias="spark_python_task", default=None)
+    spark_submit_task: Optional[SparkSubmitTask] = Field(
+        alias="spark_submit_task", default=None)
     pipeline_task: Optional[PipelineTask] = Field(alias="pipeline_task", default=None)
-    python_wheel_task: Optional[PythonWheelTask] = Field(alias="python_wheel_task", default=None)
+    python_wheel_task: Optional[PythonWheelTask] = Field(
+        alias="python_wheel_task", default=None)
     libraries: Optional[List[Library]] = Field(alias="libraries", default=None)
-    email_notifications: Optional[JobEmailNotifications] = Field(alias="email_notifications", default=None)
+    email_notifications: Optional[JobEmailNotifications] = Field(
+        alias="email_notifications", default=None)
     timeout_seconds: Optional[int] = Field(alias="timeout_seconds", default=None)
     max_retries: Optional[int] = Field(alias="max_retries", default=None)
-    min_retry_interval_millis: Optional[int] = Field(alias="min_retry_interval_millis", default=None)
+    min_retry_interval_millis: Optional[int] = Field(
+        alias="min_retry_interval_millis", default=None)
     retry_on_timeout: Optional[bool] = Field(alias="retry_on_timeout", default=None)
 
     @validator("task_key")
@@ -99,5 +106,6 @@ class JobTaskSettings(BaseModel):
     def job_cluster_key_pattern(cls, value):
         assert value is not None and re.match(r"^[\w\-]+$", value)
         return value
+
 
 JobTaskSettings.update_forward_refs()

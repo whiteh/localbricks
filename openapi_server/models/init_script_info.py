@@ -28,4 +28,5 @@ class InitScriptInfo(BaseModel):
     file: Optional[FileStorageInfo] = Field(alias="file", default=None)
     s3: Optional[S3StorageInfo] = Field(alias="S3", default=None)
 
+
 InitScriptInfo.update_forward_refs()

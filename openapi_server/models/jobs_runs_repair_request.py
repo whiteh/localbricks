@@ -32,9 +32,13 @@ class JobsRunsRepairRequest(BaseModel):
     rerun_tasks: Optional[List[str]] = Field(alias="rerun_tasks", default=None)
     latest_repair_id: Optional[int] = Field(alias="latest_repair_id", default=None)
     jar_params: Optional[List[str]] = Field(alias="jar_params", default=None)
-    notebook_params: Optional[Dict[str, Any]] = Field(alias="notebook_params", default=None)
+    notebook_params: Optional[Dict[str, Any]] = Field(
+        alias="notebook_params", default=None)
     python_params: Optional[List[str]] = Field(alias="python_params", default=None)
-    spark_submit_params: Optional[List[str]] = Field(alias="spark_submit_params", default=None)
-    python_named_params: Optional[Dict[str, Any]] = Field(alias="python_named_params", default=None)
+    spark_submit_params: Optional[List[str]] = Field(
+        alias="spark_submit_params", default=None)
+    python_named_params: Optional[Dict[str, Any]] = Field(
+        alias="python_named_params", default=None)
+
 
 JobsRunsRepairRequest.update_forward_refs()

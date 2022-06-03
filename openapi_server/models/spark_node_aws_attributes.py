@@ -21,4 +21,5 @@ class SparkNodeAwsAttributes(BaseModel):
 
     is_spot: Optional[bool] = Field(alias="is_spot", default=None)
 
+
 SparkNodeAwsAttributes.update_forward_refs()

@@ -21,4 +21,5 @@ class JobsRunsCancelRequest(BaseModel):
 
     run_id: int = Field(alias="run_id")
 
+
 JobsRunsCancelRequest.update_forward_refs()

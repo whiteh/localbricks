@@ -25,4 +25,5 @@ class CronSchedule(BaseModel):
     timezone_id: str = Field(alias="timezone_id")
     pause_status: Optional[str] = Field(alias="pause_status", default=None)
 
+
 CronSchedule.update_forward_refs()

@@ -21,4 +21,5 @@ class GitSnapshot(BaseModel):
 
     used_commit: Optional[str] = Field(alias="used_commit", default=None)
 
+
 GitSnapshot.update_forward_refs()

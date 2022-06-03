@@ -21,4 +21,5 @@ class TaskDependenciesInner(BaseModel):
 
     task_key: Optional[str] = Field(alias="task_key", default=None)
 
+
 TaskDependenciesInner.update_forward_refs()

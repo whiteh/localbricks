@@ -30,4 +30,5 @@ class JobsGet200Response(BaseModel):
     settings: Optional[JobSettings] = Field(alias="settings", default=None)
     created_time: Optional[int] = Field(alias="created_time", default=None)
 
+
 JobsGet200Response.update_forward_refs()

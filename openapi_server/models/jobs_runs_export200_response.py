@@ -22,4 +22,5 @@ class JobsRunsExport200Response(BaseModel):
 
     views: Optional[List[ViewItem]] = Field(alias="views", default=None)
 
+
 JobsRunsExport200Response.update_forward_refs()

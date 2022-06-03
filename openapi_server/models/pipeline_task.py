@@ -21,4 +21,5 @@ class PipelineTask(BaseModel):
 
     pipeline_id: Optional[str] = Field(alias="pipeline_id", default=None)
 
+
 PipelineTask.update_forward_refs()

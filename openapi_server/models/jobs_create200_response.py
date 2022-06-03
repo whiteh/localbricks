@@ -21,4 +21,5 @@ class JobsCreate200Response(BaseModel):
 
     job_id: Optional[int] = Field(alias="job_id", default=None)
 
+
 JobsCreate200Response.update_forward_refs()

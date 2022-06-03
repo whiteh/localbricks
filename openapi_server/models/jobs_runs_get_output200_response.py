@@ -26,11 +26,13 @@ class JobsRunsGetOutput200Response(BaseModel):
         metadata: The metadata of this JobsRunsGetOutput200Response [Optional].
     """
 
-    notebook_output: Optional[NotebookOutput] = Field(alias="notebook_output", default=None)
+    notebook_output: Optional[NotebookOutput] = Field(
+        alias="notebook_output", default=None)
     logs: Optional[str] = Field(alias="logs", default=None)
     logs_truncated: Optional[bool] = Field(alias="logs_truncated", default=None)
     error: Optional[str] = Field(alias="error", default=None)
     error_trace: Optional[str] = Field(alias="error_trace", default=None)
     metadata: Optional[Run] = Field(alias="metadata", default=None)
+
 
 JobsRunsGetOutput200Response.update_forward_refs()

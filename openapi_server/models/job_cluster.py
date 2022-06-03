@@ -39,4 +39,5 @@ class JobCluster(BaseModel):
         assert value is not None and re.match(r"^[\w\-]+$", value)
         return value
 
+
 JobCluster.update_forward_refs()

@@ -27,4 +27,5 @@ class TerminationReason(BaseModel):
     type: Optional[TerminationType] = Field(alias="type", default=None)
     parameters: Optional[Dict[str, Any]] = Field(alias="parameters", default=None)
 
+
 TerminationReason.update_forward_refs()

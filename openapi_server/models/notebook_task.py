@@ -21,6 +21,8 @@ class NotebookTask(BaseModel):
     """
 
     notebook_path: str = Field(alias="notebook_path")
-    base_parameters: Optional[Dict[str, Any]] = Field(alias="base_parameters", default=None)
+    base_parameters: Optional[Dict[str, Any]] = Field(
+        alias="base_parameters", default=None)
+
 
 NotebookTask.update_forward_refs()

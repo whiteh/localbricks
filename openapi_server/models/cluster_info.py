@@ -74,29 +74,41 @@ class ClusterInfo(BaseModel):
     cluster_name: Optional[str] = Field(alias="cluster_name", default=None)
     spark_version: Optional[str] = Field(alias="spark_version", default=None)
     spark_conf: Optional[Dict[str, Any]] = Field(alias="spark_conf", default=None)
-    aws_attributes: Optional[AwsAttributes] = Field(alias="aws_attributes", default=None)
+    aws_attributes: Optional[AwsAttributes] = Field(
+        alias="aws_attributes", default=None)
     node_type_id: Optional[str] = Field(alias="node_type_id", default=None)
-    driver_node_type_id: Optional[str] = Field(alias="driver_node_type_id", default=None)
+    driver_node_type_id: Optional[str] = Field(
+        alias="driver_node_type_id", default=None)
     ssh_public_keys: Optional[List[str]] = Field(alias="ssh_public_keys", default=None)
     custom_tags: Optional[List[Dict]] = Field(alias="custom_tags", default=None)
-    cluster_log_conf: Optional[ClusterLogConf] = Field(alias="cluster_log_conf", default=None)
-    init_scripts: Optional[List[InitScriptInfo]] = Field(alias="init_scripts", default=None)
+    cluster_log_conf: Optional[ClusterLogConf] = Field(
+        alias="cluster_log_conf", default=None)
+    init_scripts: Optional[List[InitScriptInfo]] = Field(
+        alias="init_scripts", default=None)
     docker_image: Optional[DockerImage] = Field(alias="docker_image", default=None)
-    spark_env_vars: Optional[Dict[str, Any]] = Field(alias="spark_env_vars", default=None)
-    autotermination_minutes: Optional[int] = Field(alias="autotermination_minutes", default=None)
-    enable_elastic_disk: Optional[bool] = Field(alias="enable_elastic_disk", default=None)
+    spark_env_vars: Optional[Dict[str, Any]] = Field(
+        alias="spark_env_vars", default=None)
+    autotermination_minutes: Optional[int] = Field(
+        alias="autotermination_minutes", default=None)
+    enable_elastic_disk: Optional[bool] = Field(
+        alias="enable_elastic_disk", default=None)
     instance_pool_id: Optional[str] = Field(alias="instance_pool_id", default=None)
-    cluster_source: Optional[ClusterSource] = Field(alias="cluster_source", default=None)
+    cluster_source: Optional[ClusterSource] = Field(
+        alias="cluster_source", default=None)
     state: Optional[ClusterState] = Field(alias="state", default=None)
     state_message: Optional[str] = Field(alias="state_message", default=None)
     start_time: Optional[int] = Field(alias="start_time", default=None)
     terminated_time: Optional[int] = Field(alias="terminated_time", default=None)
-    last_state_loss_time: Optional[int] = Field(alias="last_state_loss_time", default=None)
+    last_state_loss_time: Optional[int] = Field(
+        alias="last_state_loss_time", default=None)
     last_activity_time: Optional[int] = Field(alias="last_activity_time", default=None)
     cluster_memory_mb: Optional[int] = Field(alias="cluster_memory_mb", default=None)
     cluster_cores: Optional[float] = Field(alias="cluster_cores", default=None)
     default_tags: Optional[Dict[str, str]] = Field(alias="default_tags", default=None)
-    cluster_log_status: Optional[LogSyncStatus] = Field(alias="cluster_log_status", default=None)
-    termination_reason: Optional[TerminationReason] = Field(alias="termination_reason", default=None)
+    cluster_log_status: Optional[LogSyncStatus] = Field(
+        alias="cluster_log_status", default=None)
+    termination_reason: Optional[TerminationReason] = Field(
+        alias="termination_reason", default=None)
+
 
 ClusterInfo.update_forward_refs()

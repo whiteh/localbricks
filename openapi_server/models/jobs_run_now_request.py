@@ -30,9 +30,13 @@ class JobsRunNowRequest(BaseModel):
     job_id: Optional[int] = Field(alias="job_id", default=None)
     idempotency_token: Optional[str] = Field(alias="idempotency_token", default=None)
     jar_params: Optional[List[str]] = Field(alias="jar_params", default=None)
-    notebook_params: Optional[Dict[str, Any]] = Field(alias="notebook_params", default=None)
+    notebook_params: Optional[Dict[str, Any]] = Field(
+        alias="notebook_params", default=None)
     python_params: Optional[List[str]] = Field(alias="python_params", default=None)
-    spark_submit_params: Optional[List[str]] = Field(alias="spark_submit_params", default=None)
-    python_named_params: Optional[Dict[str, Any]] = Field(alias="python_named_params", default=None)
+    spark_submit_params: Optional[List[str]] = Field(
+        alias="spark_submit_params", default=None)
+    python_named_params: Optional[Dict[str, Any]] = Field(
+        alias="python_named_params", default=None)
+
 
 JobsRunNowRequest.update_forward_refs()

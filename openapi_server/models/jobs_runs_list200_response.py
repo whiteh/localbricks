@@ -24,4 +24,5 @@ class JobsRunsList200Response(BaseModel):
     runs: Optional[List[Run]] = Field(alias="runs", default=None)
     has_more: Optional[bool] = Field(alias="has_more", default=None)
 
+
 JobsRunsList200Response.update_forward_refs()

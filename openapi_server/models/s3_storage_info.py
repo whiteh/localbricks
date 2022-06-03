@@ -33,4 +33,5 @@ class S3StorageInfo(BaseModel):
     kms_key: Optional[str] = Field(alias="kms_key", default=None)
     canned_acl: Optional[str] = Field(alias="canned_acl", default=None)
 
+
 S3StorageInfo.update_forward_refs()

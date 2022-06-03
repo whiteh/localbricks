@@ -29,4 +29,5 @@ class ClusterEvent(BaseModel):
     type: ClusterEventType = Field(alias="type")
     details: EventDetails = Field(alias="details")
 
+
 ClusterEvent.update_forward_refs()

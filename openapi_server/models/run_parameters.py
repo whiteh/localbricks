@@ -24,9 +24,13 @@ class RunParameters(BaseModel):
     """
 
     jar_params: Optional[List[str]] = Field(alias="jar_params", default=None)
-    notebook_params: Optional[Dict[str, Any]] = Field(alias="notebook_params", default=None)
+    notebook_params: Optional[Dict[str, Any]] = Field(
+        alias="notebook_params", default=None)
     python_params: Optional[List[str]] = Field(alias="python_params", default=None)
-    spark_submit_params: Optional[List[str]] = Field(alias="spark_submit_params", default=None)
-    python_named_params: Optional[Dict[str, Any]] = Field(alias="python_named_params", default=None)
+    spark_submit_params: Optional[List[str]] = Field(
+        alias="spark_submit_params", default=None)
+    python_named_params: Optional[Dict[str, Any]] = Field(
+        alias="python_named_params", default=None)
+
 
 RunParameters.update_forward_refs()

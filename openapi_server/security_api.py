@@ -33,4 +33,3 @@ def get_token_bearerAuth(credentials: HTTPAuthorizationCredentials = Depends(bea
     """
 
     ...
-

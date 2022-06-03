@@ -26,4 +26,5 @@ class ViewItem(BaseModel):
     name: Optional[str] = Field(alias="name", default=None)
     type: Optional[ViewType] = Field(alias="type", default=None)
 
+
 ViewItem.update_forward_refs()

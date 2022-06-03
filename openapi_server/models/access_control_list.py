@@ -20,6 +20,8 @@ class AccessControlList(BaseModel):
         access_control_list: The access_control_list of this AccessControlList [Optional].
     """
 
-    access_control_list: Optional[List[AccessControlRequest]] = Field(alias="access_control_list", default=None)
+    access_control_list: Optional[List[AccessControlRequest]] = Field(
+        alias="access_control_list", default=None)
+
 
 AccessControlList.update_forward_refs()

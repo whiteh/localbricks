@@ -25,4 +25,5 @@ class RepairRunInput(BaseModel):
     rerun_tasks: Optional[List[str]] = Field(alias="rerun_tasks", default=None)
     latest_repair_id: Optional[int] = Field(alias="latest_repair_id", default=None)
 
+
 RepairRunInput.update_forward_refs()

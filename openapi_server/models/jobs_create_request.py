@@ -41,12 +41,16 @@ class JobsCreateRequest(BaseModel):
     tags: Optional[Dict[str, Any]] = Field(alias="tags", default=None)
     tasks: Optional[List[JobTaskSettings]] = Field(alias="tasks", default=None)
     job_clusters: Optional[List[JobCluster]] = Field(alias="job_clusters", default=None)
-    email_notifications: Optional[JobEmailNotifications] = Field(alias="email_notifications", default=None)
+    email_notifications: Optional[JobEmailNotifications] = Field(
+        alias="email_notifications", default=None)
     timeout_seconds: Optional[int] = Field(alias="timeout_seconds", default=None)
     schedule: Optional[CronSchedule] = Field(alias="schedule", default=None)
-    max_concurrent_runs: Optional[int] = Field(alias="max_concurrent_runs", default=None)
+    max_concurrent_runs: Optional[int] = Field(
+        alias="max_concurrent_runs", default=None)
     git_source: Optional[GitSource] = Field(alias="git_source", default=None)
     format: Optional[str] = Field(alias="format", default=None)
-    access_control_list: Optional[List[AccessControlRequest]] = Field(alias="access_control_list", default=None)
+    access_control_list: Optional[List[AccessControlRequest]] = Field(
+        alias="access_control_list", default=None)
+
 
 JobsCreateRequest.update_forward_refs()

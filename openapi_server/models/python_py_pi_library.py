@@ -23,4 +23,5 @@ class PythonPyPiLibrary(BaseModel):
     package: str = Field(alias="package")
     repo: Optional[str] = Field(alias="repo", default=None)
 
+
 PythonPyPiLibrary.update_forward_refs()

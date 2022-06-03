@@ -33,16 +33,25 @@ class TerminationParameter(BaseModel):
 
     username: Optional[str] = Field(alias="username", default=None)
     aws_api_error_code: Optional[str] = Field(alias="aws_api_error_code", default=None)
-    aws_instance_state_reason: Optional[str] = Field(alias="aws_instance_state_reason", default=None)
-    aws_spot_request_status: Optional[str] = Field(alias="aws_spot_request_status", default=None)
-    aws_spot_request_fault_code: Optional[str] = Field(alias="aws_spot_request_fault_code", default=None)
-    aws_impaired_status_details: Optional[str] = Field(alias="aws_impaired_status_details", default=None)
-    aws_instance_status_event: Optional[str] = Field(alias="aws_instance_status_event", default=None)
+    aws_instance_state_reason: Optional[str] = Field(
+        alias="aws_instance_state_reason", default=None)
+    aws_spot_request_status: Optional[str] = Field(
+        alias="aws_spot_request_status", default=None)
+    aws_spot_request_fault_code: Optional[str] = Field(
+        alias="aws_spot_request_fault_code", default=None)
+    aws_impaired_status_details: Optional[str] = Field(
+        alias="aws_impaired_status_details", default=None)
+    aws_instance_status_event: Optional[str] = Field(
+        alias="aws_instance_status_event", default=None)
     aws_error_message: Optional[str] = Field(alias="aws_error_message", default=None)
-    databricks_error_message: Optional[str] = Field(alias="databricks_error_message", default=None)
-    inactivity_duration_min: Optional[str] = Field(alias="inactivity_duration_min", default=None)
+    databricks_error_message: Optional[str] = Field(
+        alias="databricks_error_message", default=None)
+    inactivity_duration_min: Optional[str] = Field(
+        alias="inactivity_duration_min", default=None)
     instance_id: Optional[str] = Field(alias="instance_id", default=None)
     instance_pool_id: Optional[str] = Field(alias="instance_pool_id", default=None)
-    instance_pool_error_code: Optional[str] = Field(alias="instance_pool_error_code", default=None)
+    instance_pool_error_code: Optional[str] = Field(
+        alias="instance_pool_error_code", default=None)
+
 
 TerminationParameter.update_forward_refs()

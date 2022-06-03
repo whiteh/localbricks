@@ -40,15 +40,20 @@ class RunSubmitTaskSettings(BaseModel):
     """
 
     task_key: str = Field(alias="task_key")
-    depends_on: Optional[List[TaskDependenciesInner]] = Field(alias="depends_on", default=None)
-    existing_cluster_id: Optional[str] = Field(alias="existing_cluster_id", default=None)
+    depends_on: Optional[List[TaskDependenciesInner]
+                         ] = Field(alias="depends_on", default=None)
+    existing_cluster_id: Optional[str] = Field(
+        alias="existing_cluster_id", default=None)
     new_cluster: Optional[NewCluster] = Field(alias="new_cluster", default=None)
     notebook_task: Optional[NotebookTask] = Field(alias="notebook_task", default=None)
     spark_jar_task: Optional[SparkJarTask] = Field(alias="spark_jar_task", default=None)
-    spark_python_task: Optional[SparkPythonTask] = Field(alias="spark_python_task", default=None)
-    spark_submit_task: Optional[SparkSubmitTask] = Field(alias="spark_submit_task", default=None)
+    spark_python_task: Optional[SparkPythonTask] = Field(
+        alias="spark_python_task", default=None)
+    spark_submit_task: Optional[SparkSubmitTask] = Field(
+        alias="spark_submit_task", default=None)
     pipeline_task: Optional[PipelineTask] = Field(alias="pipeline_task", default=None)
-    python_wheel_task: Optional[PythonWheelTask] = Field(alias="python_wheel_task", default=None)
+    python_wheel_task: Optional[PythonWheelTask] = Field(
+        alias="python_wheel_task", default=None)
     libraries: Optional[List[Library]] = Field(alias="libraries", default=None)
     timeout_seconds: Optional[int] = Field(alias="timeout_seconds", default=None)
 
@@ -66,5 +71,6 @@ class RunSubmitTaskSettings(BaseModel):
     def task_key_pattern(cls, value):
         assert value is not None and re.match(r"^[\w\-]+$", value)
         return value
+
 
 RunSubmitTaskSettings.update_forward_refs()

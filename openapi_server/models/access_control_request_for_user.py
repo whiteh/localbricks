@@ -22,6 +22,8 @@ class AccessControlRequestForUser(BaseModel):
     """
 
     user_name: Optional[str] = Field(alias="user_name", default=None)
-    permission_level: Optional[PermissionLevel] = Field(alias="permission_level", default=None)
+    permission_level: Optional[PermissionLevel] = Field(
+        alias="permission_level", default=None)
+
 
 AccessControlRequestForUser.update_forward_refs()

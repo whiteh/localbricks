@@ -25,4 +25,5 @@ class ClusterLogConf(BaseModel):
     dbfs: Optional[DbfsStorageInfo] = Field(alias="dbfs", default=None)
     s3: Optional[S3StorageInfo] = Field(alias="s3", default=None)
 
+
 ClusterLogConf.update_forward_refs()

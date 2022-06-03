@@ -23,4 +23,5 @@ class Error(BaseModel):
     error_code: Optional[str] = Field(alias="error_code", default=None)
     message: Optional[str] = Field(alias="message", default=None)
 
+
 Error.update_forward_refs()

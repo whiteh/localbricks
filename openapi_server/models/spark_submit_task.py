@@ -21,4 +21,5 @@ class SparkSubmitTask(BaseModel):
 
     parameters: Optional[List[str]] = Field(alias="parameters", default=None)
 
+
 SparkSubmitTask.update_forward_refs()

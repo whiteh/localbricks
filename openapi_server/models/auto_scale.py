@@ -23,4 +23,5 @@ class AutoScale(BaseModel):
     min_workers: Optional[int] = Field(alias="min_workers", default=None)
     max_workers: Optional[int] = Field(alias="max_workers", default=None)
 
+
 AutoScale.update_forward_refs()

@@ -24,4 +24,5 @@ class ClusterSize(BaseModel):
     num_workers: Optional[int] = Field(alias="num_workers", default=None)
     autoscale: Optional[AutoScale] = Field(alias="autoscale", default=None)
 
+
 ClusterSize.update_forward_refs()

@@ -23,8 +23,10 @@ class ClusterSpec(BaseModel):
         libraries: The libraries of this ClusterSpec [Optional].
     """
 
-    existing_cluster_id: Optional[str] = Field(alias="existing_cluster_id", default=None)
+    existing_cluster_id: Optional[str] = Field(
+        alias="existing_cluster_id", default=None)
     new_cluster: Optional[NewCluster] = Field(alias="new_cluster", default=None)
     libraries: Optional[List[Library]] = Field(alias="libraries", default=None)
+
 
 ClusterSpec.update_forward_refs()

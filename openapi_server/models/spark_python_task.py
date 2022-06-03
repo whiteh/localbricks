@@ -23,4 +23,5 @@ class SparkPythonTask(BaseModel):
     python_file: str = Field(alias="python_file")
     parameters: Optional[List[str]] = Field(alias="parameters", default=None)
 
+
 SparkPythonTask.update_forward_refs()

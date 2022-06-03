@@ -24,4 +24,5 @@ class JobsList200Response(BaseModel):
     jobs: Optional[List[Job]] = Field(alias="jobs", default=None)
     has_more: Optional[bool] = Field(alias="has_more", default=None)
 
+
 JobsList200Response.update_forward_refs()

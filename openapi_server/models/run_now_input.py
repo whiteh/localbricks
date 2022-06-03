@@ -23,4 +23,5 @@ class RunNowInput(BaseModel):
     job_id: Optional[int] = Field(alias="job_id", default=None)
     idempotency_token: Optional[str] = Field(alias="idempotency_token", default=None)
 
+
 RunNowInput.update_forward_refs()

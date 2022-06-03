@@ -21,4 +21,5 @@ class JobsRunsRepair200Response(BaseModel):
 
     repair_id: Optional[int] = Field(alias="repair_id", default=None)
 
+
 JobsRunsRepair200Response.update_forward_refs()

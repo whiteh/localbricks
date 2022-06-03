@@ -20,6 +20,8 @@ class RepairHistory(BaseModel):
         repair_history: The repair_history of this RepairHistory [Optional].
     """
 
-    repair_history: Optional[List[RepairHistoryItem]] = Field(alias="repair_history", default=None)
+    repair_history: Optional[List[RepairHistoryItem]] = Field(
+        alias="repair_history", default=None)
+
 
 RepairHistory.update_forward_refs()

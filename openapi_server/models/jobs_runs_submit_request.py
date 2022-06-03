@@ -34,6 +34,8 @@ class JobsRunsSubmitRequest(BaseModel):
     git_source: Optional[GitSource] = Field(alias="git_source", default=None)
     timeout_seconds: Optional[int] = Field(alias="timeout_seconds", default=None)
     idempotency_token: Optional[str] = Field(alias="idempotency_token", default=None)
-    access_control_list: Optional[List[AccessControlRequest]] = Field(alias="access_control_list", default=None)
+    access_control_list: Optional[List[AccessControlRequest]] = Field(
+        alias="access_control_list", default=None)
+
 
 JobsRunsSubmitRequest.update_forward_refs()

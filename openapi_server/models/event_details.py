@@ -31,14 +31,18 @@ class EventDetails(BaseModel):
         user: The user of this EventDetails [Optional].
     """
 
-    current_num_workers: Optional[int] = Field(alias="current_num_workers", default=None)
+    current_num_workers: Optional[int] = Field(
+        alias="current_num_workers", default=None)
     target_num_workers: Optional[int] = Field(alias="target_num_workers", default=None)
-    previous_attributes: Optional[AwsAttributes] = Field(alias="previous_attributes", default=None)
+    previous_attributes: Optional[AwsAttributes] = Field(
+        alias="previous_attributes", default=None)
     attributes: Optional[AwsAttributes] = Field(alias="attributes", default=None)
-    previous_cluster_size: Optional[ClusterSize] = Field(alias="previous_cluster_size", default=None)
+    previous_cluster_size: Optional[ClusterSize] = Field(
+        alias="previous_cluster_size", default=None)
     cluster_size: Optional[ClusterSize] = Field(alias="cluster_size", default=None)
     cause: Optional[ResizeCause] = Field(alias="cause", default=None)
     reason: Optional[TerminationReason] = Field(alias="reason", default=None)
     user: Optional[str] = Field(alias="user", default=None)
+
 
 EventDetails.update_forward_refs()

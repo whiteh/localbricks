@@ -32,4 +32,5 @@ class GitSource(BaseModel):
     git_commit: Optional[str] = Field(alias="git_commit", default=None)
     git_snapshot: Optional[GitSnapshot] = Field(alias="git_snapshot", default=None)
 
+
 GitSource.update_forward_refs()

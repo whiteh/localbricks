@@ -21,4 +21,5 @@ class FileStorageInfo(BaseModel):
 
     destination: Optional[str] = Field(alias="destination", default=None)
 
+
 FileStorageInfo.update_forward_refs()

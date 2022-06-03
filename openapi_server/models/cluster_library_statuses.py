@@ -22,6 +22,8 @@ class ClusterLibraryStatuses(BaseModel):
     """
 
     cluster_id: Optional[str] = Field(alias="cluster_id", default=None)
-    library_statuses: Optional[List[LibraryFullStatus]] = Field(alias="library_statuses", default=None)
+    library_statuses: Optional[List[LibraryFullStatus]] = Field(
+        alias="library_statuses", default=None)
+
 
 ClusterLibraryStatuses.update_forward_refs()

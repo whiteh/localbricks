@@ -30,4 +30,5 @@ class Job(BaseModel):
     settings: Optional[JobSettings] = Field(alias="settings", default=None)
     created_time: Optional[int] = Field(alias="created_time", default=None)
 
+
 Job.update_forward_refs()

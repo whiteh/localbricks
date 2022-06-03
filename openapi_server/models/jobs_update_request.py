@@ -24,6 +24,8 @@ class JobsUpdateRequest(BaseModel):
 
     job_id: int = Field(alias="job_id")
     new_settings: Optional[JobSettings] = Field(alias="new_settings", default=None)
-    fields_to_remove: Optional[List[str]] = Field(alias="fields_to_remove", default=None)
+    fields_to_remove: Optional[List[str]] = Field(
+        alias="fields_to_remove", default=None)
+
 
 JobsUpdateRequest.update_forward_refs()

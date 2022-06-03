@@ -31,12 +31,16 @@ class AwsAttributes(BaseModel):
     first_on_demand: Optional[int] = Field(alias="first_on_demand", default=None)
     availability: Optional[str] = Field(alias="availability", default=None)
     zone_id: Optional[str] = Field(alias="zone_id", default=None)
-    instance_profile_arn: Optional[str] = Field(alias="instance_profile_arn", default=None)
-    spot_bid_price_percent: Optional[int] = Field(alias="spot_bid_price_percent", default=None)
+    instance_profile_arn: Optional[str] = Field(
+        alias="instance_profile_arn", default=None)
+    spot_bid_price_percent: Optional[int] = Field(
+        alias="spot_bid_price_percent", default=None)
     ebs_volume_type: Optional[str] = Field(alias="ebs_volume_type", default=None)
     ebs_volume_count: Optional[int] = Field(alias="ebs_volume_count", default=None)
     ebs_volume_size: Optional[int] = Field(alias="ebs_volume_size", default=None)
     ebs_volume_iops: Optional[int] = Field(alias="ebs_volume_iops", default=None)
-    ebs_volume_throughput: Optional[int] = Field(alias="ebs_volume_throughput", default=None)
+    ebs_volume_throughput: Optional[int] = Field(
+        alias="ebs_volume_throughput", default=None)
+
 
 AwsAttributes.update_forward_refs()

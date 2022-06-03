@@ -27,6 +27,8 @@ class LibraryFullStatus(BaseModel):
     library: Optional[Library] = Field(alias="library", default=None)
     status: Optional[LibraryInstallStatus] = Field(alias="status", default=None)
     messages: Optional[List[str]] = Field(alias="messages", default=None)
-    is_library_for_all_clusters: Optional[bool] = Field(alias="is_library_for_all_clusters", default=None)
+    is_library_for_all_clusters: Optional[bool] = Field(
+        alias="is_library_for_all_clusters", default=None)
+
 
 LibraryFullStatus.update_forward_refs()

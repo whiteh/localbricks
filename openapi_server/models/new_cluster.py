@@ -42,17 +42,25 @@ class NewCluster(BaseModel):
     autoscale: Optional[AutoScale] = Field(alias="autoscale", default=None)
     spark_version: str = Field(alias="spark_version")
     spark_conf: Optional[Dict[str, Any]] = Field(alias="spark_conf", default=None)
-    aws_attributes: Optional[AwsAttributes] = Field(alias="aws_attributes", default=None)
+    aws_attributes: Optional[AwsAttributes] = Field(
+        alias="aws_attributes", default=None)
     node_type_id: str = Field(alias="node_type_id")
-    driver_node_type_id: Optional[str] = Field(alias="driver_node_type_id", default=None)
+    driver_node_type_id: Optional[str] = Field(
+        alias="driver_node_type_id", default=None)
     ssh_public_keys: Optional[List[str]] = Field(alias="ssh_public_keys", default=None)
     custom_tags: Optional[Dict[str, str]] = Field(alias="custom_tags", default=None)
-    cluster_log_conf: Optional[ClusterLogConf] = Field(alias="cluster_log_conf", default=None)
-    init_scripts: Optional[List[InitScriptInfo]] = Field(alias="init_scripts", default=None)
-    spark_env_vars: Optional[Dict[str, Any]] = Field(alias="spark_env_vars", default=None)
-    enable_elastic_disk: Optional[bool] = Field(alias="enable_elastic_disk", default=None)
-    driver_instance_pool_id: Optional[str] = Field(alias="driver_instance_pool_id", default=None)
+    cluster_log_conf: Optional[ClusterLogConf] = Field(
+        alias="cluster_log_conf", default=None)
+    init_scripts: Optional[List[InitScriptInfo]] = Field(
+        alias="init_scripts", default=None)
+    spark_env_vars: Optional[Dict[str, Any]] = Field(
+        alias="spark_env_vars", default=None)
+    enable_elastic_disk: Optional[bool] = Field(
+        alias="enable_elastic_disk", default=None)
+    driver_instance_pool_id: Optional[str] = Field(
+        alias="driver_instance_pool_id", default=None)
     instance_pool_id: Optional[str] = Field(alias="instance_pool_id", default=None)
     policy_id: Optional[str] = Field(alias="policy_id", default=None)
+
 
 NewCluster.update_forward_refs()

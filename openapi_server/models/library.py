@@ -34,4 +34,5 @@ class Library(BaseModel):
     maven: Optional[MavenLibrary] = Field(alias="maven", default=None)
     cran: Optional[RCranLibrary] = Field(alias="cran", default=None)
 
+
 Library.update_forward_refs()

@@ -23,4 +23,5 @@ class NotebookOutput(BaseModel):
     result: Optional[str] = Field(alias="result", default=None)
     truncated: Optional[bool] = Field(alias="truncated", default=None)
 
+
 NotebookOutput.update_forward_refs()

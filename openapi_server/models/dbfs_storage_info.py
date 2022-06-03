@@ -21,4 +21,5 @@ class DbfsStorageInfo(BaseModel):
 
     destination: Optional[str] = Field(alias="destination", default=None)
 
+
 DbfsStorageInfo.update_forward_refs()

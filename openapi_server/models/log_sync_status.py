@@ -23,4 +23,5 @@ class LogSyncStatus(BaseModel):
     last_attempted: Optional[int] = Field(alias="last_attempted", default=None)
     last_exception: Optional[str] = Field(alias="last_exception", default=None)
 
+
 LogSyncStatus.update_forward_refs()

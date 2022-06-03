@@ -23,4 +23,5 @@ class JobsRunNow200Response(BaseModel):
     run_id: Optional[int] = Field(alias="run_id", default=None)
     number_in_job: Optional[int] = Field(alias="number_in_job", default=None)
 
+
 JobsRunNow200Response.update_forward_refs()

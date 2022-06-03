@@ -32,4 +32,5 @@ class RepairHistoryItem(BaseModel):
     id: Optional[int] = Field(alias="id", default=None)
     task_run_ids: Optional[List[int]] = Field(alias="task_run_ids", default=None)
 
+
 RepairHistoryItem.update_forward_refs()
