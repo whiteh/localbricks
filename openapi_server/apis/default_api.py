@@ -68,7 +68,7 @@ async def jobs_create(
 @router.post(
     "/2.1/jobs/delete",
     responses={
-        200: {"model": object, "description": "Job was deleted successfully."},
+        200: {"model": Dict, "description": "Job was deleted successfully."},
         400: {"model": Error, "description": "The request was malformed. See JSON response for error details."},
         401: {"model": Error, "description": "The request was unauthorized."},
         500: {"model": Error, "description": "The request was not handled correctly due to a server error."},
@@ -136,7 +136,7 @@ async def jobs_list(
 @router.post(
     "/2.1/jobs/reset",
     responses={
-        200: {"model": object, "description": "Job was overwritten successfully."},
+        200: {"model": Dict, "description": "Job was overwritten successfully."},
         400: {"model": Error, "description": "The request was malformed. See JSON response for error details."},
         401: {"model": Error, "description": "The request was unauthorized."},
         500: {"model": Error, "description": "The request was not handled correctly due to a server error."},
@@ -180,7 +180,7 @@ async def jobs_run_now(
 @router.post(
     "/2.1/jobs/runs/cancel",
     responses={
-        200: {"model": object, "description": "Run was cancelled successfully."},
+        200: {"model": Dict, "description": "Run was cancelled successfully."},
         400: {"model": Error, "description": "The request was malformed. See JSON response for error details."},
         401: {"model": Error, "description": "The request was unauthorized."},
         500: {"model": Error, "description": "The request was not handled correctly due to a server error."},
@@ -202,7 +202,7 @@ async def jobs_runs_cancel(
 @router.post(
     "/2.1/jobs/runs/delete",
     responses={
-        200: {"model": object, "description": "Run was deleted successfully."},
+        200: {"model": Dict, "description": "Run was deleted successfully."},
         400: {"model": Error, "description": "The request was malformed. See JSON response for error details."},
         401: {"model": Error, "description": "The request was unauthorized."},
         500: {"model": Error, "description": "The request was not handled correctly due to a server error."},
@@ -366,7 +366,7 @@ async def jobs_runs_submit(
 @router.post(
     "/2.1/jobs/update",
     responses={
-        200: {"model": object, "description": "Job was updated successfully."},
+        200: {"model": Dict, "description": "Job was updated successfully."},
         400: {"model": Error, "description": "The request was malformed. See JSON response for error details."},
         401: {"model": Error, "description": "The request was unauthorized."},
         500: {"model": Error, "description": "The request was not handled correctly due to a server error."},
